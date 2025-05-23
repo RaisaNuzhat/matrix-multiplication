@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Multiplication</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Matrix Multiplication</h1>
+    <form method="POST">
+        <label>Matrix A (use Python list format, e.g., [[1,2],[3,4]])</label><br>
+        <textarea name="matrixA" required></textarea><br><br>
+
+        <label>Matrix B (use Python list format, e.g., [[5,6],[7,8]])</label><br>
+        <textarea name="matrixB" required></textarea><br><br>
+
+        <button type="submit">Multiply</button>
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <pre>{{ result }}</pre>
+    {% elif error %}
+        <h2 style="color:red;">Error:</h2>
+        <pre>{{ error }}</pre>
+    {% endif %}
+</body>
+</html>

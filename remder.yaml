@@ -2,6 +2,5 @@ services:
   - type: web
     name: matrix-multiplier
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
-    autoDeploy: true
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
